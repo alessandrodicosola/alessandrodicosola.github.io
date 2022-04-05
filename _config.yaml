@@ -1,0 +1,34 @@
+# === PLUGINS ===
+plugins:
+   - jekyll-octicons
+#   - "jekyll-github-metadata"
+# ===============
+
+# === METADATA (site.*)
+
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+
+baseurl: "" # the subpath of your site, e.g. /blog
+
+title: "Alessandro Dicosola' repositories" # the name of your site, e.g. ACME Corp.
+
+contacts:
+ - name: "github"
+   url: "https://github.com/alessandrodicosola"
+
+ - name: "linkedin"
+   url: "www.linkedin.com/in/alessandrodicosola"
+  
+
+
+repositories:
+  exclude:
+    - IntrusionDetection
+    - lsqls
+    - rsd
+    - rsc
+    # TODO: Remove froim hidden
+    - NAI
+
+
+# ===================  

@@ -1,0 +1,14 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand mb-0 h1 fs-2" href="{{ site.url }}">{{site.title}}</a>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            {% for contact in site.contacts %}
+            <li class="nav-item ">
+                <a class="nav-link " href="{{contact.url}}" rel="me" target="_noblank">
+                    <i class="bi-{{contact.name}} fs-2" aria-hidden="true"></i>    
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</nav>

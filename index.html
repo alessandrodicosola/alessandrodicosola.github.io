@@ -1,0 +1,18 @@
+---
+layout: default
+title: "Alessandro Dicosola's repositories"
+---
+
+<div class="container-fluid m-4">
+    <div class="row row-cols-auto gap-3">
+        {% assign by_stars = site.github.public_repositories | sort: 'stargazers_count' | reverse%}
+        {% for repository in by_stars %}
+            {% if site.repositories.exclude contains repository.name %}
+                {% continue %}
+            {% else %}
+                {% include repository.html repository=repository %}
+            {% endif %}
+        {% endfor %}    
+    </div>    
+</div> 
+
