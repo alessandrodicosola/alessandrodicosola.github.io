@@ -1,0 +1,12 @@
+{
+    "image" : "jekyll/jekyll",
+    "build": {
+        "args": {
+            "network": "host"
+        }
+    },  
+    "forwardPorts": [35729],
+    "extensions": [
+        "redhat.vscode-yaml"
+    ]
+}
