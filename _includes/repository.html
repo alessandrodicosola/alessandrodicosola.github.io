@@ -1,16 +1,31 @@
 {% if include.repository %}
 {% assign repository = include.repository %}
 <div class="card shadow-sm p-1 bg-body rounded" style="width: 25rem;">
-    <div class="card-body">
-        <div class="h3 card-title">
-            {{repository.name}}
+    <div class="card-body position-relative">
+        <div class="d-flex justify-content-between">
+            <h5 class="text-wrap" style="width: 80%;">{{repository.name}}</h5>
+            <div class="d-flex justify-content-end align-items-center gap-2">
+                <div class="gap-0">
+                    {% octicon star-fill height:16 class:"d-inline-block align-middle" %}
+                    <span class="d-inline-block align-middle">{{ repository.stargazers_count}}</span>    
+                </div>
+                <div>
+                    {% octicon eye height:16 class:"d-inline-block align-middle" %}
+                    <span class="d-inline-block align-middle">{{ repository.watchers_count }}</span>    
+                </div>
+            </div>
         </div>
-        <div class="card-subtitle">
-            {% octicon star-fill height:16 %} {{ repository.stargazers_count}}
-            {% octicon eye height:16 %} {{ repository.watchers_count }}
+        <p class="card-text text-muted">{{repository.description}}</p>
+
+        <div class="container-fluid p-0 row-cols-auto justify-content-start ">
+            {% for topic in repository.topics %}
+            <div class="badge rounded-pill bg-primary">{{ topic }}</div>
+            {% endfor %}
         </div>
-        <div class="card-text">{{repository.description}}</div>
+    </div>
+    <div class="card-footer text-muted justify-content-center">
+        <a href="{{repository.html_url}}" rel="me" target="_blank" class="text-primary text-decoration-none">Show
+            more</a>
     </div>
 </div>
 {% endif%}
-
