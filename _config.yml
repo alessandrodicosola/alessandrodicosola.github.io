@@ -29,6 +29,11 @@ repositories:
     - rsc
     # TODO: Remove froim hidden
     - NAI
+  
+  frameworks:
+    - pytorch
+    - keras
+    - sql
 
 
 # ===================  

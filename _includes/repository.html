@@ -19,11 +19,16 @@
 
         <div class="container-fluid p-0 row-cols-auto justify-content-start ">
             {% for topic in repository.topics %}
-            <div class="badge rounded-pill bg-primary">{{ topic }}</div>
+                {% if site.repositories.frameworks contains topic %}
+                    <div class="badge rounded-pill bg-info">{{ topic }}</div>
+                {% else %}
+                    <div class="badge rounded-pill bg-primary">{{ topic }}</div>
+                {% endif %}
             {% endfor %}
+            <div class="badge rounded-pill bg-secondary">{{ repository.language }}</div>
         </div>
     </div>
-    <div class="card-footer text-muted justify-content-center">
+    <div class="card-footer text-muted d-flex justify-content-end">
         <a href="{{repository.html_url}}" rel="me" target="_blank" class="text-primary text-decoration-none">Show
             more</a>
     </div>
