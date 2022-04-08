@@ -28,6 +28,7 @@ contacts:
 
 repositories:
   exclude:
+    - alessandrodicosola.github.io
     - IntrusionDetection
     - lsqls
     - rsd
