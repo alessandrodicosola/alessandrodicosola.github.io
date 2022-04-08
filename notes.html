@@ -1,0 +1,16 @@
+---
+layout: default
+title: "Alessandro Dicosola's notes"
+---
+
+<div class="container-fluid m-4">
+    <div class="row row-cols-auto gap-3">
+        {% for note in site.notes %}
+        <a class="card text-decoration-none" href="{{note.url}}">
+            <h4 class="card-title">{{note.title}}</h1>
+            <p class="card-text">{{note.description}}</p>
+        </a>
+        {% endfor %}    
+    </div>    
+</div> 
+

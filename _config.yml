@@ -4,6 +4,11 @@ plugins:
 #   - "jekyll-github-metadata"
 # ===============
 
+collections:
+  notes:
+    output: true
+    permalink: /:path:output_ext
+
 # === METADATA (site.*)
 
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
